@@ -4,7 +4,7 @@ const heartsBg = document.querySelector(".background-hearts");
 
 let scale = 1;
 
-noBtn.addEventListener("click", () => {
+noBtn.addEventListener("mouseenter", () => {
     scale += 0.25;
     yesBtn.style.transform = `scale(${scale})`;
 
@@ -34,3 +34,4 @@ function createHeart() {
 }
 
 setInterval(createHeart, 300);
+
