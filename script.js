@@ -4,6 +4,7 @@ const heartsBg = document.querySelector(".background-hearts");
 
 let scale = 1;
 
+// Nee vlucht weg bij hover
 noBtn.addEventListener("mouseenter", () => {
     scale += 0.25;
     yesBtn.style.transform = `scale(${scale})`;
@@ -13,6 +14,7 @@ noBtn.addEventListener("mouseenter", () => {
     noBtn.style.top = Math.random() * 70 + "%";
 });
 
+// Ja aangeklikt
 yesBtn.addEventListener("click", () => {
     document.body.innerHTML = `
         <div class="card">
@@ -22,7 +24,7 @@ yesBtn.addEventListener("click", () => {
     `;
 });
 
-// zwevende hartjes
+// Zwevende hartjes
 function createHeart() {
     const heart = document.createElement("span");
     heart.innerHTML = Math.random() > 0.5 ? "💗" : "😻";
@@ -34,4 +36,3 @@ function createHeart() {
 }
 
 setInterval(createHeart, 300);
-
